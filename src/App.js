@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import logo from './images/logo_gold.png';
+import './app.css';
+import Origin from "./components/Origin";
+import { cost } from './components/Destination'
+import Destination from "./components/Destination";
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+          <img src={logo} className="Max.ng" alt="logo" />
+            <h1 className="lead">max.ng
+        </h1>
+          <p className="lead">
+              A React component to calculate the cost of transportation/delivery
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+          <div className="container">
+              <Origin />
+              <br/>
+              <Destination />
+              <br/>
+              <p className="lead">{cost}</p>
+          </div>
       </div>
     );
   }
